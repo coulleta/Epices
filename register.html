@@ -18,16 +18,12 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
+					<header id="header">
 						<h1><a href="index.html">Projet Epices</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="#">Se connecter</a></li>
-							</ul>
-						</nav>
+						<input type="submit" value="Se connecter" />
 					</header>
 				<!-- One -->
-					<section id="one" class="wrapper style1 special">
+					<section class="wrapper style1 special">
 						<div class = "conteneur_register">
 							<div class="register1">
 									<h1>S'inscrire</h1>
@@ -39,21 +35,30 @@
 							</div>
 							<div class="register2">
 								<form method="post" action="traitement.php"> <!--methode => post ou get (info transit par la barre d'adresse http, pas reco)-->
-									<input type="submit" value="S'inscrire via Facebook?" />
-									<p> Ou</p>
 									<p>
+									<input type="submit" value="S'inscrire via Facebook?" />
+									<h5>------------Ou-----------</h5>
+									<fieldset>							
 										<input type="radio" name="sexe" value="monsieur" id="monsieur" /> <label for="monsieur">M.</label>
 										<input type="radio" name="sexe" value="madame" id="madame" /><label for="madame">Mme</label>
 										<input type="radio" name="sexe" value="mademoiselle" id="mademoiselle" /><label for="mademoiselle">Mlle</label>
-										<label for="prenom">Prénom</label><br/>
-										<input type="texte" name="prenom" id="prenom"><br/>
-										<label for="mdp">Nom</label> <br/>
-										<input type="texte" name="nom" id="nom"><br/>
-										<label for="mdp">Adresse mail</label> <br/>
-										<input type="texte" name="mail" id="mail"><br/>
-										<label for="mdp">Mot de passe</label> <br/>
-										<input type="password" name="mdp" id="mdp">
+										<div class="register_nom">
+											<div class="register_short">
+												<label for="prenom">Prénom</label>
+												<input type="text" name="prenom" id="prenom" required>
+											</div>
+											<div class="register_short">
+												<label for="nom">Nom</label>
+												<input type="text" name="nom" id="nom" required>
+											</div>
+										</div>
+										<label for="email">Adresse mail</label>
+										<input type="email" name="email" id="email" required>
+										<label for="mdp">Mot de passe</label>
+										<input type="password" name="mdp" id="mdp" required>
+										<br/><br/>
 										<input type="submit" value="Envoyer" />
+										</fieldset>	
 									</p>
 								</form>
 							</div>
