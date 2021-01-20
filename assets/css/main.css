@@ -2427,19 +2427,29 @@ input, select, textarea {
 	  	display: flex;
 	  	flex-wrap: nowrap;
 	  	overflow-x: auto;
-	   	overflow :scroll
+	   	overflow :auto;
 		moz-overflow-scrolling: touch; /* ne marche pas vraiment..*/
 	 	-webkit-overflow-scrolling: touch;/* ne marche pas vraiment..*/
 	    scroll-behavior: smooth; /*ajouter du java recommander*/
-	scrollbar-width: none;
+	/*scrollbar-width: none;*/
+	visibility: hidden;
 	}
 
-	
+
 	.scrollImg {
     	flex: 0 0 auto;
     	padding: 14px 10px 10px 10px;
 	}
-
+	.scrollImg, .photobanner:hover,
+	.photobanner:focus{
+		visibility: visible;
+	}
+	.scrollImg_delayed{
+		transition: visibility 0.2s;
+	}
+	.scrollImg_delayed:hover{
+		transition: visibility 0s 0.2s;
+	}
 	.photobanner img {
 		 -webkit-transition: all 0.4s ease;
 		 -moz-transition: all 0.4s ease;
