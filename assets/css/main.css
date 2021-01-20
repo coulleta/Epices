@@ -11,6 +11,7 @@
 	--d1: 1s; /*encadrement du titre*/
 	--d2: 4s;
 	--d3: 3.5s;
+	--gutter: 20px; /*padding banner*/
 }
 
 html, body, div, span, applet, object,
@@ -2430,24 +2431,22 @@ input, select, textarea {
 		moz-overflow-scrolling: touch; /* ne marche pas vraiment..*/
 	 	-webkit-overflow-scrolling: touch;/* ne marche pas vraiment..*/
 	    scroll-behavior: smooth; /*ajouter du java recommander*/
-		scrollbar-width: none;
+	scrollbar-width: none;
+	}
 
-	}
-	.photobanner::-webkit-scrollbar {
-	 	display: none;
-	}
 	
 	.scrollImg {
     	flex: 0 0 auto;
-    	padding: 5px 5px 5px 5px;
+    	padding: 14px 10px 10px 10px;
 	}
 
 	.photobanner img {
-		 -webkit-transition: all 0.2s ease;
-		 -moz-transition: all 0.2s ease;
-		 -o-transition: all 0.2s ease;
-		 -ms-transition: all 0.2s ease;
-		 transition: all 0.2s ease;
+		 -webkit-transition: all 0.4s ease;
+		 -moz-transition: all 0.4s ease;
+		 -o-transition: all 0.4s ease;
+		 -ms-transition: all 0.4s ease;
+		 transition: all 0.4s ease;
+		 border-radius: 2px;
 	}
 
 	.photobanner img:hover {
@@ -2461,6 +2460,8 @@ input, select, textarea {
 		 -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 		 box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	}
+
+
 
 
 /* CTA - gère le block avant le footer qui remontre l'image de fond et permet de remonter au 1er block*/
@@ -2779,4 +2780,3 @@ input, select, textarea {
 		display: flex;
 		justify-content: space-around;
 	}
-
