@@ -56,45 +56,54 @@
 
 				<!-- Main -->
 				<article id="main">
-					<header>
-						<h2>Poivre noir, blanc, vert, rouge, gris ou encore de sichuan ? Il y a de quoi s'y perdre, non ?</h2>
-						<p>Le vrai et le faux du poivre!!</p>
-					</header>
+						<header class ="header_banner major">
+							<h2>Nos Recettes</h2> <br/>
+							<h3>simple et gouteuse !! :) </h3>
+						</header>
 					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Recettes du monde</h2>
-								<p>simple et gouteuse !! :) </p>
-							</header>
-						</div>
-							<section class="wrapper alt style5">
+							<!--<section class="wrapper alt style5">
 								<div class="inner">
 									<h3>A remplir avec les ingrédient!!</h3>
 									<p>et le resumé rapide</p>
 								</div>
-							</section>
-							<!-- Two -->
-							<section class="wrapper alt style2">
-								<section class="spotlight">
-									<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-										<h2>1ère étape de la recette</h2>
-										<p>A faire</p>
-									</div>
-								</section>
-								<section class="spotlight">
-									<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-										<h2>2nde étape de la recette</h2>
-										<p>A faire</p>
-									</div>
-								</section>
-								<section class="spotlight">
-									<div class="image"><img src="images/pic03.jpg" alt="" /></div>
-										<div class="content">
-										<h2>3ème étape de la recette</h2>
-										<p>A faire</p>
-									</div>
-								</section>
-							</section>
+							</section>-->
+							<div class = "conteneur_recette_home">
+								<div class="recette_home1">
+									<form method="post" action="traitement.php"> <!--methode => post ou get (info transit par la barre d'adresse http, pas reco)-->
+										<p>
+											<fieldset>	
+												<label>Type de cuisine</label>						
+												<input type="radio" name="cuisine" value="Asie_sud" id="Asie_sud" /> <label for="Asie_sud">Asie du sud</label> <br/>
+												<input type="radio" name="cuisine" value="Asie_sud_est" id="Asie_sud_est" /> <label for="Asie_sud_est">Asie du sud-est</label> <br/>
+												<input type="radio" name="cuisine" value="Europe" id="Europe" /> <label for="Europe">Europe</label> <br/>
+												<input type="radio" name="cuisine" value="Ameriques" id="Ameriques" /> <label for="Ameriques">Ameriques</label> <br/>
+												<br/><br/>
+												<input type="submit" value="Envoyer" />
+										</fieldset>	
+									</p>
+								</form>
+								</div>
+								<div class="recette_home2">
+										<h1>Nos délicieux plats!</h1>
+										<div class = "display_recettes">
+											 <figure>
+        										<a href="recettes/recettes1.html"><img src="images/poivre_sichuan.jpg" alt="" /><br/>Recette 1</a>
+        									</figure>
+											<figure>
+        										<a href="recettes/recettes1.html"><img src="images/poivre_sichuan.jpg" alt="" /><br/>Recette 1</a>
+        									</figure>
+        									<figure>
+        										<a href="recettes/recettes1.html"><img src="images/poivre_sichuan.jpg" alt="" /><br/>Recette 1</a>
+        									</figure>
+        									<figure>
+        										<a href="recettes/recettes1.html"><img src="images/poivre_sichuan.jpg" alt="" /><br/>Recette 1</a>
+        									</figure>
+        									<figure>
+        										<a href="recettes/recettes1.html"><img src="images/poivre_sichuan.jpg" alt="" /><br/>Recette 1</a>
+        									</figure>
+										</div>
+								</div>
+							</div>
 						</section>
 				</article>
 

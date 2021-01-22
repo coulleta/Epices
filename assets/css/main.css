@@ -32,7 +32,7 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
+article, aside, details,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
@@ -290,7 +290,6 @@ input, select, textarea {
 	header p {
 		color: rgba(255, 255, 255, 0.5);
 		position: relative;
-		top: -0.25em;
 	}
 
 	header h3 + p {
@@ -302,16 +301,22 @@ input, select, textarea {
 	header h6 + p {
 		font-size: 0.9em;
 	}
+ 		/*top, right, bottom, left*/
+		.header_banner{
+			background-color: rgba(0,0,0,0.8);
+		}
 
-	header.major {
-		margin: 0 0 3.5em 0;
-	}
-
-		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+		header.major h2 {
 			border-bottom: solid 2px #fff;
 			display: inline-block;
-			padding-bottom: 1em;
 			position: relative;
+			font-size: 4em;
+			color: white;
+			margin-bottom: 0;
+		}
+
+		header.major h3 {
+			padding : 2em  1em 1em 1em;
 		}
 
 			header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
@@ -330,7 +335,6 @@ input, select, textarea {
 			header.major {
 				margin: 0 0 2em 0;
 			}
-
 		}
 
 	@media screen and (max-width: 980px) {
@@ -347,6 +351,9 @@ input, select, textarea {
 		margin: 0 0 0 0;
 		/*marges : top, right, bottom et left.*/
 	}
+/*	fieldset{
+		border:solid;
+	}*/
 
 	label {
 		color: #fff;
@@ -1979,6 +1986,7 @@ input, select, textarea {
 
 	body {
 		padding-top: 3.5em;
+
 	}
 
 	#header {
@@ -2265,6 +2273,7 @@ input, select, textarea {
 			z-index: 1;
 		}
 
+/*Affiche un cadre progressivement autour du titre*/
 			#banner h2:before, #banner h2:after {
 				-moz-transition: width var(--d0) ease;
 				-webkit-transition: width var(--d0) ease;
@@ -2535,8 +2544,8 @@ input, select, textarea {
 		}
 
 /* Main */
-/*Page 2 - Recette */
-	#main > header {
+/*Page 2 - Explore */
+	#main  {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_map_world.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_map_world.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_map_world.jpg");
@@ -2546,24 +2555,38 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align: center;
-		padding : 5em  5em 5em 0; /*taille de la bannière dépend de ca...*/
+		padding : 1em  1em 1em 1em; /*taille de la bannière dépend de ca... top, right, bottom, left*/
+		font-family: "Times New Roman", Times, serif;
 	}
 
-		#main > header h2 {
-			font-size: 2em;
-			margin: 0 0 0 0;
+/*		.header_banner{
+			background-color: rgba(0,0,0,0.8);
+
+		}
+		.header_banner h2 {
+			font-size: 4em;
+			color: white;
+			
+		}
+		.header_banner h3 {
+			padding : 0em  1em 1em 1em;
+			
 		}
 
-		#main > header p {
-			color: inherit;
+
+		#header_banner p {
 			letter-spacing: 0.225em;
 			/*text-transform: uppercase;*/	
+/*			font-size: 5em;
 			top: 0;
+			color: white;
 		}
 
-			#main > header p a {
-				color: inherit;
+			#header_banner > p {
+				color: white;
+				font-size: 5em;
 			}
+*/
 
 /*		@media screen and (max-width: 1680px) {
 
@@ -2607,7 +2630,51 @@ input, select, textarea {
 		background-attachment: scroll;
 	}
 
-/*Inscription*/
+/*PAge acceuil recette*/
+	.conteneur_recette_home{ /*pour ID on met un "#" mais pour un class un "."*/
+		display: flex;
+		justify-content: center;
+	}
+
+	@media screen and (max-width: 780px) {
+		.recette_home1 {
+		display: none;
+		}
+	}
+	.recette_home1	{
+		text-align: left;
+		padding: 0 1em 0 1em; /*top, right, bottom, left*/
+		margin: 0 0 0 1em;
+		border:thin solid;
+	}	
+	.recette_home2 {
+		/*width: 50%;*/
+		padding: 0 1em 1em 1em; /*top, right, bottom, left*/
+		margin : 0 1em 1em 1em; /*top, right, bottom, left*/
+		text-align: left;
+	}
+	.recette_home1 p 	{
+		text-align: left;
+	}
+	/*.recette_home2 {
+		width: 100%;
+	}*/
+
+	.register_nom
+	{
+		display: flex;
+		justify-content: space-around;
+	}
+	.register_short
+	{
+		display: block;
+	}
+
+	.display_recettes > figcaption, figure{
+		display: inline-block;
+	}
+
+/*Page :; Inscription*/
 	.conteneur_register{ /*pour ID on met un "#" mais pour un class un "."*/
 		display: flex;
 		justify-content: center;
