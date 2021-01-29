@@ -305,6 +305,9 @@ input, select, textarea {
 		.header_banner{
 			background-color: rgba(0,0,0,0.8);
 		}
+		header.major {
+			font-family: "Times New Roman", Times, serif;
+		}
 
 		header.major h2 {
 			border-bottom: solid 2px #fff;
@@ -1420,7 +1423,7 @@ input, select, textarea {
 
 			.wrapper.style1 input[type="checkbox"] + label,
 			.wrapper.style1 input[type="radio"] + label {
-				color: #c8ece9;
+				color: white;
 			}
 
 				.wrapper.style1 input[type="checkbox"] + label:before,
@@ -1941,7 +1944,6 @@ input, select, textarea {
 						#menu ul > li > a {
 							line-height: 3em;
 						}
-
 					}
 
 		#menu .close {
@@ -1967,7 +1969,7 @@ input, select, textarea {
 
 		}
 
-	body.is-menu-visible #page-wrapper {
+	body.is-menu-visible #page-wrapper { /*floute le reste de la page si le menu est ouvert*/
 		opacity: 0.35;
 	}
 
@@ -2163,60 +2165,7 @@ input, select, textarea {
 			margin: 0;
 		}
 
-			#header form input {
-				display: inline-block;
-				height: 2.5em;
-				position: relative;
-				top: -2px;
-				vertical-align: middle;
-			}
-
-		#header #search {
-			-moz-transition: all 0.5s ease;
-			-webkit-transition: all 0.5s ease;
-			-ms-transition: all 0.5s ease;
-			transition: all 0.5s ease;
-			/*max-width: 0;*/
-			/*opacity: 0;*/
-			overflow: hidden;
-			padding: 0;
-			white-space: nowrap;
-		}
-
-			#header #search input {
-				width: 12em;
-			}
-
-			#header #search.visible {
-				max-width: 12.5em;
-				opacity: 1;
-				padding: 0 0.5em 0 0;
-			}
-
-		@media screen and (max-width: 980px) {
-
-			#header .links {
-				display: none;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#header {
-				height: 2.75em;
-				line-height: 2.75em;
-			}
-
-				#header h1 {
-					padding: 0 0 0 1em;
-				}
-
-				#header .main .search {
-					display: none;
-				}
-
-		}
+	
 			#header .alt {
 			background: transparent;
 		}
@@ -2556,7 +2505,6 @@ input, select, textarea {
 		background-size: cover;
 		text-align: center;
 		padding : 1em  1em 1em 1em; /*taille de la bannière dépend de ca... top, right, bottom, left*/
-		font-family: "Times New Roman", Times, serif;
 	}
 
 /*		.header_banner{
@@ -2672,6 +2620,23 @@ input, select, textarea {
 
 	.display_recettes > figcaption, figure{
 		display: inline-block;
+		margin: 0 2em 2em 0; /*marges : top, right, bottom et left.*/
+	}
+	.display_recettes img{
+		border-radius: 2px;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		-ms-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		
+	}
+
+	.display_recettes img:hover {
+		cursor: pointer;
+		-webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+		-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+		box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 	}
 
 /*Page :; Inscription*/
@@ -2857,3 +2822,60 @@ input, select, textarea {
 		display: flex;
 		justify-content: space-around;
 	}
+
+.search_form form{ /*source code search : https://codes4education.com/animated-search-bar-using-html-and-css/;*/
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width:50px;
+    height:50px;
+    background-color: white;
+    border-radius: 25px;
+    border:4px solid white;
+    padding:5px;
+}
+.search_form input{
+	position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:42.5px;
+    line-height: 30px;
+    outline:0;
+    border:0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding:0px 20px;
+}
+.search_form .fa{
+  padding: 10px;
+    width:42.5px;
+    height:42.5px;
+    position: absolute;
+    top:0;
+    right:0;
+    border-radius: 50%;
+    color:#07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+.search_form form:hover{
+    width:200px;
+    cursor: pointer;
+
+}
+.search_form  form:hover input{
+display: block;
+}
+
+.search_form form:hover .fa{
+    background-color: #07051a;
+    color:#fff;
+  /*transition: visibility 0s linear 300ms, opacity 300ms;*/
+    /*background-color: #07051a; /*pas sur de l'utilité*/
+    /*color:#fff;*/
+}
